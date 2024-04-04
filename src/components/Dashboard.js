@@ -44,7 +44,7 @@ const Dashboard = ({ issues, setIssues }) => {
             <td data-label="Address">{issue.address}</td>
             <td data-label="Category">{issue.category}</td>
             <td data-label="Description">{issue.description}</td>
-            <td data-label="Location">{issue.location.lat ? issue.location.lat + ' ' + issue.location.lng : issue.location}</td>
+            <td data-label="Location">{issue.location}</td>
             <td data-label="Edit"> <button onClick={() => setSelectedIssue(issue)}>Edit</button></td>
         </tr>
     ));
