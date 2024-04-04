@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import IssueDetail from './IssueDetail';
-import { editReport, deleteReport } from '../services/services';
+import { editReport, deleteReport, getReports } from '../services/services';
 
-const Dashboard = ({ issues, setIssues }) => {
+const Dashboard = () => {
 
     const [sortConfig, setSortConfig] = useState({ key: 'dateSubmitted', direction: 'desc' });
     const [selectedIssue, setSelectedIssue] = useState(null);
+    const [issues, setIssues] = useState([]);
+
+    useEffect(() => {
+        getReports().then((data) => {
+            setIssues(data);
+        });
+    }, []);
 
     const sortedIssues = [...issues].sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {

@@ -7,14 +7,6 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
 
-  const [issues, setIssues] = useState([]);
-
-  useEffect(() => {
-    getReports().then((data) => {
-      setIssues(data);
-    });
-  }, []);
-
   return (
     <div>
       <Routes>
