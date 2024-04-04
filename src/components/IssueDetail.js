@@ -18,7 +18,7 @@ const IssueDetail = ({ issue, onSave, onDelete, onBack }) => {
             <p>Date submitted: {issue.dateSubmitted}</p>
             <p>Category: {issue.category}</p>
             <p>Description: {issue.description}</p>
-            <p>Location: {issue.location}</p>
+            <p>Location: location</p>
             <form>
                 <label>
                     Notes:
