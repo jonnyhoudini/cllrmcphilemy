@@ -14,15 +14,22 @@ export const getReports = () => {
 
 export const postReport = (formData) => {
     console.log('payload', formData);
-    return fetch(baseURL, {
-        method: 'POST',
-        //using json so need to add headers. Can be removed if we switch to form data
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-    })
-        .then(res => res.json())
+    try {
+
+        return fetch(baseURL, {
+            method: 'POST',
+            //using json so need to add headers. Can be removed if we switch to form data
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(res => res.json())
+
+    } catch (err) {
+        console.log(err);
+    }
+
 }
 
 export const deleteReport = (id) => {
