@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import IssueDetail from './IssueDetail';
 import { editReport, deleteReport, getReports } from '../services/services';
 
