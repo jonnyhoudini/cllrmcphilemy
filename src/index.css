@@ -1,3 +1,99 @@
+/* Base styles */
+.content-wrapper {
+  padding: 20px;
+}
+
+#form-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.close-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#map-container {
+  height: 300px;
+  /* Adjust based on your preference */
+}
+
+#issue-form {
+  margin-top: 20px;
+}
+
+#buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.leaflet-container {
+  height: 300px;
+  width: 100%;
+}
+
+/* Responsive Styles */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  #form-container {
+    padding: 30px;
+  }
+
+  #map-container {
+    height: 350px;
+  }
+
+  .leaflet-container {
+    height: 350px;
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 30px;
+  }
+
+  #form-container {
+    margin: 0 auto;
+    max-width: 720px;
+    /* Center the form on larger screens */
+  }
+
+  #buttons-container {
+    flex-direction: row;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #map-container {
+    height: 400px;
+  }
+
+  .leaflet-container {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .content-wrapper {
+    padding: 40px;
+  }
+
+  #form-container {
+    max-width: 1140px;
+  }
+}
+
+
 body {
   background-color: #f7f7f7;
   font-family: 'Poppins', sans-serif;
@@ -8,9 +104,9 @@ body {
   color: #333;
 }
 
-#info {
+/* #info {
   margin-top: 40px;
-}
+} */
 
 #home-header {
   display: flex;
@@ -76,31 +172,31 @@ body {
   background-color: #f7f7f7;
 }
 
-.content-wrapper {
+/* .content-wrapper {
   display: flex;
   height: 100vh;
   /* justify-content: space-between; */
-  /* align-items: flex-start; */
-  width: 100%;
-  /* Adjust if you want the form and map to align differently */
-}
+/* align-items: flex-start; */
+/* width: 100%; */
+/* Adjust if you want the form and map to align differently */
+/* } */
 
-#map-container {
+/* #map-container {
   flex: 3;
-  height: 100vh;
-  /* Adjust the width of the map container as needed */
-  /* margin-left: 20px; */
-  /* Optional: adds some space between the form and the map */
+  height: 100vh; */
+/* Adjust the width of the map container as needed */
+/* margin-left: 20px; */
+/* Optional: adds some space between the form and the map */
 
-}
+/* } */
 
-#form-container {
+/* #form-container {
   position: relative;
   flex: 1;
   max-width: 300px;
   padding: 20px;
   height: 100%;
-}
+} */
 
 #flashcard-form {
   width: 60%;
@@ -358,11 +454,6 @@ th:after {
   margin-right: 0;
 }
 
-.leaflet-container {
-  height: 100vh;
-  width: 100%;
-}
-
 .show-button {
   position: absolute;
   left: 10px;
@@ -414,14 +505,14 @@ input[type=file]::file-selector-button {
   cursor: pointer;
 } */
 
-input[type="file"].form-control::file-selector-button {
+/* input[type="file"].form-control::file-selector-button {
   display: none;
 }
 
 input[type="file"].form-control::before {
   content: attr(value) "Upload photo";
   /*<-- any text you want */
-  background-color: #e9ecef;
+/* background-color: #e9ecef;
   border: 0 solid;
   border-color: inherit;
   border-inline-end-width: 1px;
@@ -439,9 +530,8 @@ input[type="file"].form-control.form-control-lg::before {
   padding: 0.75rem 1rem;
   margin: -0.75rem -1rem;
   margin-inline-end: 1rem;
-}
-
-@media (max-width: 814px) {
+} */
+*/ @media (max-width: 814px) {
   .send-text {
     display: none;
   }
