@@ -172,32 +172,6 @@ body {
   background-color: #f7f7f7;
 }
 
-/* .content-wrapper {
-  display: flex;
-  height: 100vh;
-  /* justify-content: space-between; */
-/* align-items: flex-start; */
-/* width: 100%; */
-/* Adjust if you want the form and map to align differently */
-/* } */
-
-/* #map-container {
-  flex: 3;
-  height: 100vh; */
-/* Adjust the width of the map container as needed */
-/* margin-left: 20px; */
-/* Optional: adds some space between the form and the map */
-
-/* } */
-
-/* #form-container {
-  position: relative;
-  flex: 1;
-  max-width: 300px;
-  padding: 20px;
-  height: 100%;
-} */
-
 #flashcard-form {
   width: 60%;
 }
@@ -488,50 +462,8 @@ th:after {
   cursor: pointer;
 }
 
-/* input[type=file] {
-  margin-left: -2px !important;
-}
 
-input[type=file]::-webkit-file-upload-button {
-  display: none;
-}
-
-input[type=file]::file-selector-button {
-  display: none;
-}
-
-.custom-file-button:hover label {
-  background-color: #dde0e3;
-  cursor: pointer;
-} */
-
-/* input[type="file"].form-control::file-selector-button {
-  display: none;
-}
-
-input[type="file"].form-control::before {
-  content: attr(value) "Upload photo";
-  /*<-- any text you want */
-/* background-color: #e9ecef;
-  border: 0 solid;
-  border-color: inherit;
-  border-inline-end-width: 1px;
-  border-radius: 0;
-  color: #212529;
-  padding: 0.5rem 1rem;
-  margin: -0.5rem -1rem;
-  margin-inline-end: 1rem;
-  pointer-events: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-input[type="file"].form-control.form-control-lg::before {
-  padding: 0.75rem 1rem;
-  margin: -0.75rem -1rem;
-  margin-inline-end: 1rem;
-} */
-*/ @media (max-width: 814px) {
+@media (max-width: 814px) {
   .send-text {
     display: none;
   }
