@@ -111,7 +111,6 @@ const Dashboard = () => {
                                         {sortConfig.key === 'category' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                                     </th>
                                     <th>Description</th>
-                                    <th>Location</th>
                                     <th>View</th>
                                 </tr>
                             </thead>
