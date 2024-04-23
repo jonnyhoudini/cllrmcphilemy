@@ -51,8 +51,7 @@ const Dashboard = () => {
             <td data-label="Address">{issue.address}</td>
             <td data-label="Category">{issue.category}</td>
             <td data-label="Description">{issue.description}</td>
-            <td data-label="Location">location</td>
-            <td data-label="Edit"> <button onClick={() => setSelectedIssue(issue)}>Edit</button></td>
+            <td data-label="Edit"> <button onClick={() => setSelectedIssue(issue)}>View</button></td>
         </tr>
     ));
 
@@ -113,7 +112,7 @@ const Dashboard = () => {
                                     </th>
                                     <th>Description</th>
                                     <th>Location</th>
-                                    <th>Edit</th>
+                                    <th>View</th>
                                 </tr>
                             </thead>
                             <tbody>

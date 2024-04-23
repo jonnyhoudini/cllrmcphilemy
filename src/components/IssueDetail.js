@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import IssueMap from './IssueMap';
 
 const IssueDetail = ({ issue, onSave, onDelete, onBack }) => {
     const [editedIssue, setEditedIssue] = useState(issue);
@@ -18,7 +19,8 @@ const IssueDetail = ({ issue, onSave, onDelete, onBack }) => {
             <p>Date submitted: {issue.dateSubmitted}</p>
             <p>Category: {issue.category}</p>
             <p>Description: {issue.description}</p>
-            <p>Location: location</p>
+            <p>Location:</p>
+            <IssueMap />
             <form>
                 <label>
                     Notes:

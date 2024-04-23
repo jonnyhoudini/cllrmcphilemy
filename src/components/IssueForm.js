@@ -110,6 +110,7 @@ const IssueForm = ({ category }) => {
 
                     <Form onSubmit={onSubmit} id="issue-form">
                         <Form.Group>
+                            <Form.Label>Name</Form.Label>
                             <Form.Control
                                 onChange={onChange}
                                 type="text"
@@ -122,6 +123,7 @@ const IssueForm = ({ category }) => {
                         </Form.Group>
 
                         <Form.Group>
+                            <Form.Label>Email</Form.Label>
                             <Form.Control
                                 onChange={onChange}
                                 type="email"
@@ -135,6 +137,7 @@ const IssueForm = ({ category }) => {
 
                         {category === 'housing' &&
                             <Form.Group>
+                                <Form.Label>Housing type</Form.Label>
                                 <Form.Select
                                     onChange={onChange} // Add the onChange function here
                                     id="housingType" // Add an id to identify the select element
@@ -150,6 +153,7 @@ const IssueForm = ({ category }) => {
                         }
 
                         <Form.Group>
+                            <Form.Label>Description</Form.Label>
                             <Form.Control
                                 as="textarea"
                                 onChange={onChange}
@@ -163,7 +167,19 @@ const IssueForm = ({ category }) => {
                         </Form.Group>
 
                         <Form.Group controlId="formFile" className="mb-3">
+                            <Form.Label>Upload a photo (optional)</Form.Label>
                             <Form.Control type="file" onChange={handleFileChange} />
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>I have read and agreed to the data policy.</Form.Label>
+                            <Form.Control
+                                onChange={onChange}
+                                type="checkbox"
+                                id="policy"
+                                name="policy"
+                                value={formData.policy}
+                            />
                         </Form.Group>
 
                         <div id="buttons-container">

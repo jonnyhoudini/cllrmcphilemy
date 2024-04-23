@@ -17,7 +17,6 @@
 
 #map-container {
   height: 300px;
-  /* Adjust based on your preference */
 }
 
 #issue-form {
@@ -103,10 +102,6 @@ body {
   -webkit-text-size-adjust: none;
   color: #333;
 }
-
-/* #info {
-  margin-top: 40px;
-} */
 
 #home-header {
   display: flex;
@@ -261,7 +256,7 @@ Link {
 #issue-form textarea {
   width: 100%;
   /* padding: 10px; */
-  margin: 10px 0;
+  margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
