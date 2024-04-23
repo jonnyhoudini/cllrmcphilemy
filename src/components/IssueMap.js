@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet'
-import LocationMarker from './LocationMarker'
+import IssueMarker from './IssueMarker'
 
 const IssueMap = () => {
 
