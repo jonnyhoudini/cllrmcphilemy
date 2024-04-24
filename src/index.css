@@ -518,3 +518,65 @@ th:after {
     font-weight: bold;
   }
 }
+
+/* Responsive adjustments for the dashboard on smaller screens */
+@media (max-width: 576px) {
+  #dashboard-container {
+    padding: 20px 10px;
+    /* Reduce padding to fit smaller screens */
+    max-width: 100%;
+    /* Utilize the full width for small devices */
+  }
+
+  table {
+    font-size: 14px;
+    /* Smaller font size to fit more content */
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+    /* Adjust padding for table cells */
+  }
+
+  th.sortableRow {
+    font-size: 16px;
+    /* Keep the sortable headers slightly larger */
+  }
+
+  td button {
+    padding: 8px 10px;
+    /* Smaller buttons */
+    font-size: 14px;
+  }
+
+  /* Enhance visibility of interactive elements */
+  .sortableRow:after {
+    font-size: 16px;
+    /* Larger icons for sorting arrows */
+  }
+}
+
+/* Further enhance table visibility on very small screens */
+@media (max-width: 360px) {
+  td:before {
+    /* Adjust positioning of labels in responsive table */
+    width: 50%;
+    /* Increase width to accommodate longer labels */
+  }
+
+  td {
+    padding-left: 60%;
+    /* Adjust padding to prevent overlap with content */
+  }
+}
+
+/* Increase tap target sizes for better touch interaction */
+@media (max-width: 768px) {
+  td button {
+    padding: 12px 15px;
+    /* Larger buttons for easier interaction */
+    border-radius: 8px;
+    /* Rounder corners for a more touch-friendly design */
+  }
+}
