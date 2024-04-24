@@ -9,17 +9,18 @@ const IssueDetail = ({ issue, onSave, onDelete, onBack }) => {
         newIssue[e.target.name] = e.target.value;
         setEditedIssue(newIssue);
     };
+    const date = new Date(issue.dateSubmitted);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const year = date.getFullYear();
 
     return (
         <div className="issue-detail-container">
-            <h2>Issue Detail</h2>
-            <p>Name: {issue.name}</p>
-            <p>Address: {issue.address}</p>
+            <h2>{issue.name}</h2>
             <p>Email: {issue.email}</p>
-            <p>Date submitted: {issue.dateSubmitted}</p>
+            <p>Date submitted: {`${day}/${month}/${year}`}</p>
             <p>Category: {issue.category}</p>
             <p>Description: {issue.description}</p>
-            <p>Location:</p>
             <IssueMap />
             <form>
                 <label>
