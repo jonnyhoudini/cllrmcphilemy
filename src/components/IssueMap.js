@@ -4,9 +4,9 @@ import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet'
 import IssueMarker from './IssueMarker'
 
-const IssueMap = () => {
+const IssueMap = ({ issue }) => {
 
-    const issueLocation = { lat: 55.935656837206324, lng: -4.014247655868531 };
+    const issueLocation = issue.location;
 
     return (
         <div>

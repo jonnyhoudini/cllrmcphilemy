@@ -21,7 +21,7 @@ const IssueDetail = ({ issue, onSave, onDelete, onBack }) => {
             <p>Date submitted: {`${day}/${month}/${year}`}</p>
             <p>Category: {issue.category}</p>
             <p>Description: {issue.description}</p>
-            <IssueMap />
+            <IssueMap issue={issue} />
             <form>
                 <label>
                     Notes:
