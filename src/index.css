@@ -520,63 +520,61 @@ th:after {
 }
 
 /* Responsive adjustments for the dashboard on smaller screens */
+/* Improvements for screens less than 576px */
 @media (max-width: 576px) {
   #dashboard-container {
-    padding: 20px 10px;
-    /* Reduce padding to fit smaller screens */
+    padding: 10px 5px;
+    /* Minimize padding to use space more efficiently */
     max-width: 100%;
-    /* Utilize the full width for small devices */
+    /* Use full width to avoid horizontal squeezing */
   }
 
   table {
-    font-size: 14px;
-    /* Smaller font size to fit more content */
+    font-size: 12px;
+    /* Decrease font size to fit content but maintain legibility */
   }
 
   th,
   td {
-    padding: 10px 8px;
-    /* Adjust padding for table cells */
-  }
-
-  th.sortableRow {
-    font-size: 16px;
-    /* Keep the sortable headers slightly larger */
+    padding: 8px 4px;
+    /* Reduce padding inside cells to free up space */
   }
 
   td button {
-    padding: 8px 10px;
-    /* Smaller buttons */
-    font-size: 14px;
+    padding: 6px 10px;
+    /* Smaller buttons but ensure they remain tap-friendly */
+    font-size: 12px;
   }
 
-  /* Enhance visibility of interactive elements */
-  .sortableRow:after {
-    font-size: 16px;
-    /* Larger icons for sorting arrows */
+  /* Ensure table headers are readable and not overly large */
+  th.sortableRow {
+    font-size: 14px;
+    /* Slightly larger to remain distinguishable */
+  }
+
+  /* Increase visibility and accessibility of sorting icons */
+  th.sortableRow:after {
+    font-size: 14px;
+    /* Ensure icons are still visible and clear */
   }
 }
 
-/* Further enhance table visibility on very small screens */
+/* Further adjustments for very small devices */
 @media (max-width: 360px) {
   td:before {
-    /* Adjust positioning of labels in responsive table */
-    width: 50%;
-    /* Increase width to accommodate longer labels */
+    width: 60%;
+    /* Increase label width for better clarity */
   }
 
   td {
-    padding-left: 60%;
-    /* Adjust padding to prevent overlap with content */
+    padding-left: 65%;
+    /* Adjust text padding to avoid overlap with labels */
   }
-}
 
-/* Increase tap target sizes for better touch interaction */
-@media (max-width: 768px) {
+  /* Optimize button sizes for easier interaction on very small screens */
   td button {
-    padding: 12px 15px;
-    /* Larger buttons for easier interaction */
-    border-radius: 8px;
-    /* Rounder corners for a more touch-friendly design */
+    padding: 8px;
+    /* Ensure buttons are still large enough to be easily tapped */
+    font-size: 12px;
   }
 }
