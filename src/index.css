@@ -557,10 +557,7 @@ th:after {
     font-size: 14px;
     /* Ensure icons are still visible and clear */
   }
-}
 
-/* Further adjustments for very small devices */
-@media (max-width: 360px) {
   td:before {
     width: 60%;
     /* Increase label width for better clarity */
