@@ -48,7 +48,6 @@ const Dashboard = () => {
             <td data-label="Date Submitted">{formatDate(issue.dateSubmitted)}</td>
             <td data-label="Name">{issue.name}</td>
             <td data-label="Email">{issue.email}</td>
-            <td data-label="Address">{issue.address}</td>
             <td data-label="Category">{issue.category}</td>
             <td data-label="Description">{issue.description}</td>
             <td data-label="Edit"> <button onClick={() => setSelectedIssue(issue)}>View</button></td>
@@ -105,7 +104,6 @@ const Dashboard = () => {
                                     </th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Address</th>
                                     <th className="sortableRow" onClick={() => handleSort('category')}>
                                         Category
                                         {sortConfig.key === 'category' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
