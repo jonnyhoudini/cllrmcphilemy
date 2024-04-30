@@ -11,7 +11,7 @@ const Dashboard = () => {
     useEffect(() => {
         getReports().then((data) => {
             setIssues(data);
-            console.log('issues', issues);
+            console.log('data', data);
         });
     }, []);
 
