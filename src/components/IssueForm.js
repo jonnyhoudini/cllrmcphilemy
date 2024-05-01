@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { postReport, getAddress } from '../services/services';
 import { useNavigate } from 'react-router-dom';
-import { Alert, Form, Button, InputGroup, FormControl, FormSelect } from 'react-bootstrap';
+import { Alert, Form, Button, InputGroup, FormControl, FormSelect, FormCheck } from 'react-bootstrap';
 import LeafletMap from './LeafletMap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -21,7 +21,7 @@ const IssueForm = ({ category }) => {
         email: "",
         address: "",
         map: "",
-        housingType: ""
+        housingType: "",
     })
 
     const [selectedFile, setSelectedFile] = useState(null);
@@ -38,7 +38,12 @@ const IssueForm = ({ category }) => {
         const newFormData = Object.assign({}, formData);
         newFormData[e.target.name] = e.target.value;
         setFormData(newFormData);
-    }
+    };
+
+    const handleCheckboxChange = (e) => {
+        const value = e.target.checked;
+        console.log('value', value);
+    };
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -173,12 +178,11 @@ const IssueForm = ({ category }) => {
 
                         <Form.Group>
                             <Form.Label>I have read and agreed to the data policy.</Form.Label>
-                            <Form.Control
-                                onChange={onChange}
+                            <Form.Check
                                 type="checkbox"
                                 id="policy"
                                 name="policy"
-                                value={formData.policy}
+                                onChange={handleCheckboxChange}
                             />
                         </Form.Group>
 
