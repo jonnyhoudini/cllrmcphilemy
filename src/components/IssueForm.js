@@ -12,6 +12,7 @@ const IssueForm = ({ category }) => {
 
     const [showAlert, setShowAlert] = useState(false);
     const [showForm, setShowForm] = useState(true);
+    const [policyAgreed, setPolicyAgreed] = useState(false);
 
     const [formData, setFormData] = useState({
         name: "",
@@ -43,6 +44,11 @@ const IssueForm = ({ category }) => {
     const handleCheckboxChange = (e) => {
         const value = e.target.checked;
         console.log('value', value);
+        if (value) {
+            setPolicyAgreed(true);
+        } else {
+            setPolicyAgreed(false);
+        }
     };
 
     const onSubmit = (e) => {
@@ -177,17 +183,21 @@ const IssueForm = ({ category }) => {
                         </Form.Group>
 
                         <Form.Group>
-                            <Form.Label>I have read and agreed to the data policy.</Form.Label>
                             <Form.Check
                                 type="checkbox"
                                 id="policy"
                                 name="policy"
                                 onChange={handleCheckboxChange}
+                                label="I have read and agreed to the data policy"
                             />
                         </Form.Group>
 
                         <div id="buttons-container">
-                            <Button type="submit" id="save" className="formheader send-button">{plane} <span className="send-text">Send</span></Button>
+                            {policyAgreed ?
+                                <Button type="submit" id="save" className="formheader send-button">{plane} <span className="send-text">Send</span></Button>
+                                :
+                                <Button type="submit" id="save" className="formheader send-button-disabled" disabled>{plane} <span className="send-text">Send</span></Button>
+                            }
                             <Button id="cancel" className="send-button" onClick={() => navigate('/')}>Cancel</Button>
                         </div>
                     </Form>
