@@ -29,7 +29,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <h1>What issue can I help you with?</h1>
+                <h1>What can I help you with?</h1>
                 <div id="button-container">
                     <Link to="/bins"><button><span className="icon">🗑️</span>Litter</button></Link>
                     <Link to="/grass"><button><span className="icon">🌱</span>Grass</button></Link>
